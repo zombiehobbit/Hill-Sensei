@@ -2540,15 +2540,21 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
     z-index: 20;
 }
 
+#background-flights {
+    background-color: url('images/background.jpg');
+}
+
 .spotlight:before {
-    /*background-image: url("../../images/banner-main.JPG");*/
-    background-color: #1E90FF;
-    content: '';
+    background-image: url('images/background.jpg');
     display: block;
     height: 150%;
     left: 0;
     top: 0;
     width: 100%;
+}
+
+form > div, form > select {
+    margin: auto!important;
 }
 
 .spotlight .image.main {
@@ -2596,14 +2602,23 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
     width: 100%;
 }
 
+.spotlight.bottom {
+    height: 500px!important;
+}
+
 .spotlight.top .content {
-    border-bottom-width: 0.35em;
+    /*border-bottom-width: 0.35em;*/
     top: 0;
 }
 
 .spotlight.bottom .content {
-    border-top-width: 0.35em;
+    /*border-top-width: 0.35em;*/
     top: 0;
+    height: 100%;
+}
+
+.spotlight.right {
+    height: 500px!important;
 }
 
 .spotlight.left .content, .spotlight.right .content {
@@ -2614,12 +2629,12 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 }
 
 .spotlight.left .content {
-    border-right-width: 0.35em;
+    /*border-right-width: 0.35em;*/
     left: 0;
 }
 
 .spotlight.right .content {
-    border-left-width: 0.35em;
+    /*border-left-width: 0.35em;*/
     right: 0;
 }
 
@@ -3107,17 +3122,8 @@ body.is-touch #banner {
 
 /* XLarge */
 
-@media screen and (max-width: 1680px) {
-    /* Basic */
-    body, input, select, textarea {
-        font-size: 13pt;
-    }
-}
+@media screen and (max-width: 6800px) {
 
-
-/* Large */
-
-@media screen and (max-width: 1280px) {
     /* Basic */
     body, input, select, textarea {
         font-size: 11.5pt;
@@ -3131,7 +3137,7 @@ body.is-touch #banner {
     }
     .spotlight.left .content, .spotlight.right .content {
         padding: 4.5em 2.5em;
-        width: 25em;
+        width: 100%;
     }
     /* Wrapper */
     .wrapper {
