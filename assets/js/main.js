@@ -19,6 +19,8 @@
 		var	$window = $(window),
 			$body = $('body');
 
+			hideApplyButton(); //see if we need to hide the apply button on startup 
+
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
 
@@ -302,5 +304,24 @@
 				._parallax();
 
 	});
+
+	//hides the apply button if the viewport is under a certin size
+	function hideApplyButton(){
+		//any thing lower then these values and we hide() the array button
+		var min_height=587,min_width=911;
+
+		if($(window).height()<min_height && $(window).width()<min_width || $(window).height()<min_height || $(window).width()<min_width){
+			$("#sensei_tutors").hide();
+		}else {
+			$("#sensei_tutors").show();
+		}
+
+	}
+
+	//get rid of the "apply" button when the window is under a certin size; added by Dillon 5/16/16
+	$(window).resize(function(){
+		hideApplyButton();
+	});
+
 
 })(jQuery);
